@@ -32,6 +32,7 @@ class Ststm32Platform(PlatformBase):
                 self.packages["framework-arduinoststm32"]["optional"] = True
             else:
                 self.packages["toolchain-gccarmnoneeabi"]["version"] = "~1.90201.0"
+                self.packages["framework-cmsis"]["optional"] = False
 
         default_protocol = self.board_config(variables.get(
             "board")).get("upload.protocol") or ""
